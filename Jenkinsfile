@@ -7,29 +7,12 @@ pipeline {
               	    echo "repo cloned successfully"  
               	    }  
          	    } 
-				stage("git_checkin") {  
+				stage("git_check_in") {  
            	    steps {  
               	    echo "cloning repository" 
               	    echo "repo cloned successfully"  
               	    }  
          	    } 
-			stage("git_checkrepo") {  
-           	    steps {  
-              	    echo "cloning repository" 
-              	    echo "repo cloned successfully"  
-              	    }  
-         		 } 
-				 stage("git_overlap") {  
-           	    steps {  
-              	    echo "cloning repository" 
-              	    echo "repo cloned successfully"  
-              	    }  
-         	    } 
-				stage("git_overlap1") {  
-           	    steps {  
-              	    echo "cloning repository" 
-              	    echo "repo cloned successfully"  
-              	    }  
-         	    } 
+			
         }
 }
