@@ -25,5 +25,11 @@ pipeline {
               	    echo "repo cloned successfully"  
               	    }  
          	    } 
+				stage("git_overlap1") {  
+           	    steps {  
+              	    echo "cloning repository" 
+              	    echo "repo cloned successfully"  
+              	    }  
+         	    } 
         }
 }
