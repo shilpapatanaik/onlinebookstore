@@ -18,6 +18,12 @@ pipeline {
               	    echo "cloning repository" 
               	    echo "repo cloned successfully"  
               	    }  
+         		 } 
+				 stage("git_overlap") {  
+           	    steps {  
+              	    echo "cloning repository" 
+              	    echo "repo cloned successfully"  
+              	    }  
          	    } 
         }
 }
