@@ -13,5 +13,11 @@ pipeline {
               	    echo "repo cloned successfully"  
               	    }  
          	    } 
+			stage("git_checkrepo") {  
+           	    steps {  
+              	    echo "cloning repository" 
+              	    echo "repo cloned successfully"  
+              	    }  
+         	    } 
         }
 }
