@@ -9,7 +9,7 @@ pipeline {
          	    } 
         }
 		stages {  
-       	    stage("git_checkin") {  
+       	    stage("git_acess") {  
            	    steps {  
               	    echo "cloning repository" 
               	    echo "repo cloned successfully"  
