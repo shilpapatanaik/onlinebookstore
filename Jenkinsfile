@@ -1,19 +1,21 @@
-pipeline {  
-    agent any  
-        stages {  
-       	    stage("git_checkout") {  
-           	    steps {  
-              	    echo "cloning repository" 
-              	    echo "repo cloned successfully"  
-              	    }  
-         	    } 
-        }
-		stages {  
-       	    stage("git_acess") {  
-           	    steps {  
-              	    echo "cloning repository" 
-              	    echo "repo cloned successfully"  
-              	    }  
-         	    } 
-        }
+node {
+    stage('Clone') {
+        git branch: 'master', url: 'git@github.com:shilpapatanaik/onlinebookstore.git'
+    }
+     stage('Build') {
+        bat 'mvn clean install'
+    }
+      stage('Test the war') {
+                echo ("deploy contextPath: null, war: 'target/*.war''")
+                
+    }    
+      stage('artifacts') {
+        archiveArtifacts artifacts: 'target/*.war', followSymlinks: false
+                
+    }
+      
+      stage('Deploy'){
+           echo 'Deploy the project'
+    }
+
 }
