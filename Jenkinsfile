@@ -1,6 +1,5 @@
 node {
-
-    stage('Clone') {
+   stage('Clone') {
         git branch: 'Feature/2026.08.01',
             url: 'git@github.com:shilpapatanaik/onlinebookstore.git'
     }
